@@ -5,10 +5,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 5000;
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: 'GET',
-}));
+app.use(cors());
 
 app.get('/api/wiki/:query', async (req, res) => {
   const query = req.params.query;
